@@ -1,0 +1,46 @@
+<html>
+	<head>
+	
+	</head>
+	
+	<body>
+		<script>
+			//config
+			var numCount = 1000 // only need to change this
+			var alertWhenFinished = false
+			
+			// looks (incorrect syntax may break it)
+			
+			var useHR = true // optional 'true/false'
+			var TextSize = "2pt"
+			var TextColor = "black"
+			var TextFont = "Arial"
+			
+			var maxNumbers = 1000 // changing this may crash your browser if numCount and maxNumbers is too high
+			/*
+				code not recommended to edit
+				this as it could break it.
+			*/
+			
+			var i = 0
+			document.write("<h1>Numbers between 0 to "+ numCount +"</h1>")
+			document.write("<hr>")
+			if (numCount <= maxNumbers) {
+				for (; i<=numCount; i++) {
+					document.write('<font face="'+ TextFont + '" ' + 'color="' + TextColor + '" size="' + TextSize +'">' + i + " is a number between 1 and " + numCount + "</font>")
+					document.write("<br>")
+					if (useHR == true) {
+						document.write("<hr>")
+					}
+				}
+				
+				if (alertWhenFinished == true) {
+					alert("Numbers generated click ok to continue")
+				}
+			} else {
+				document.write("failed to display that many numbers!")
+				document.write("<br>")
+			}
+		</script>
+	</body>
+</html>
